@@ -21,7 +21,7 @@ const createWindow = () => {
     win.loadFile(path.join(__dirname, 'frontend/index.html'));
     win.show();
 
-    win.webContents.openDevTools({ mode: "detach" });
+    // win.webContents.openDevTools({ mode: "detach" });
 }
 
 app.whenReady().then(() => {
