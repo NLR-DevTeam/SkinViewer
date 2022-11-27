@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+
+    <title>Skin Viewer</title>
+
+    <!-- Local mdui assets -->
+    <link rel="stylesheet" href="mdui/css/mdui.min.css" />
+    <script src="mdui/js/mdui.min.js"></script>
+
+    <!-- Local skinview3d asset -->
+    <script src="skinview3d/skinview3d.bundle.js"></script>
+
+    <!-- Local base64 Lib -->
+    <script src="base64/base64.js"></script>
+
+    <!-- Main asset -->
+    <link rel="stylesheet" href="main/main.css" />
+</head>
+
+<body>
+    <header class="mdui-appbar mdui-appbar-fixed">
+        <div class="mdui-toolbar mdui-color-indigo">
+            <p class="mdui-typo-headline">Skin Viewer</p>
+            <div class="mdui-toolbar-spacer"></div>
+
+            <i id="minimizeBtn">
+                <svg t="1669545696126" class="icon"
+                    viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2725" width="18"
+                    height="18">
+                    <path
+                        d="M192.128 768l639.68 0C867.264 768 896 796.416 896 832c0 35.392-29.184 64-64.192 64L192.128 896C156.736 896 128 867.584 128 832 128 796.608 157.184 768 192.128 768z"
+                        p-id="2726" fill="#ffffff"></path>
+                </svg>
+            </i>
+            <i class="mdui-icon material-icons" onclick="window.close()">close</i>
+        </div>
+    </header>
+
+    <div id="opPanel">
+        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-blue-400 mdui-text-color-white mdui-shadow-2"
+            id="selectFromLocalBtn">选择本地皮肤</button>
+
+        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-green-400 mdui-text-color-white mdui-shadow-2"
+            id="getFromPlayerBtn">获取正版皮肤</button>
+
+        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink-400 mdui-text-color-white mdui-shadow-2"
+            id="changeBackgroundBtn">切换预览背景</button>
+
+        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-red-400 mdui-text-color-white mdui-shadow-2"
+            id="resetBtn">重置预览状态</button>
+
+        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-purple-400 mdui-text-color-white mdui-shadow-2"
+            id="aboutBtn">关于</button>
+    </div>
+
+    <canvas id="skinContainer"></canvas>
+
+    <!-- About dialog -->
+    <div class="mdui-dialog" id="aboutDialog">
+        <div class="mdui-dialog-title">关于</div>
+        <div class="mdui-dialog-content">
+            Skin Viewer 1.0 <br>
+            By XIAYM <br>
+
+            <p class="text-selectable">
+                皮肤查看器: bs-community/skinview3d <br>
+                UI Framework: zdhxiong/mdui
+            </p>
+        </div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>确定</button>
+        </div>
+    </div>
+
+    <!-- Main script -->
+    <script src="main/main.js"></script>
+</body>
+
+</html>

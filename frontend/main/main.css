@@ -1,0 +1,37 @@
+* {
+    user-select: none;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+header {
+    -webkit-app-region: drag;
+}
+
+header i {
+    -webkit-app-region: no-drag;
+    cursor: pointer;
+}
+
+#opPanel {
+    position: absolute;
+    top: 105px;
+    left: 75px;
+}
+
+#opPanel .mdui-btn {
+    margin-top: 30px;
+    min-width: 200px;
+    display: block;
+}
+
+#skinContainer {
+    margin-top: 100px;
+    margin-left: 400px;
+}
+
+.text-selectable {
+    user-select: text;
+}
